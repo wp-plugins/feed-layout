@@ -57,7 +57,7 @@ if (isset($_POST['save']))
 }
 else
 {
-    $options = get_option('pstl');
+    $options = get_option('fdl');
 }
 ?>
 <div class="wrap">
@@ -72,6 +72,6 @@ else
 <?php fdl_field_textarea('after', 'Code after the post'); ?>
 </table>
 
-<p class="submit"><input type="submit" name="save" value="Save"></p>
+<p class="submit"><input type="submit" name="save" value="Save"/></p>
 </form>
 </div>

@@ -2,7 +2,7 @@
 Tags: feed, layout, theme, adsense, page, ads
 Requires at least: 2.1
 Tested up to: 2.5.1
-Stable tag: 1.0
+Stable tag: 1.0.1
 Donate link: http://www.satollo.com/english/donate
 Contributors: satollo
 
@@ -33,7 +33,10 @@ You can see it live from my [feed](http://www.satollo.com/english/feed)
 
 == History ==
 
-1.0
+Version 1.0.1
+	- fixed a bug (serious) in the option page
+	
+Versioon 1.0
 	- first release
 
 == Frequently Asked Questions ==
