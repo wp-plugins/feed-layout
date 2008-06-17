@@ -2,7 +2,7 @@
 Tags: feed, layout, theme, adsense, page, ads
 Requires at least: 2.1
 Tested up to: 2.5.1
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 Donate link: http://www.satollo.com/english/donate
 Contributors: satollo
 
@@ -32,7 +32,9 @@ You can see it live from my [feed](http://www.satollo.com/english/feed)
 3. Go to the options page and configure the plugin
 
 == History ==
-
+Version 1.0.2
+ - added to special "tag" to put in the texts: link and title (between quare brackets)
+ 
 Version 1.0.1
 	- fixed a bug (serious) in the option page
 	

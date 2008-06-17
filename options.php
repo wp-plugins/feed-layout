@@ -66,7 +66,7 @@ else
 <h2>Feed Layout</h2>
 
 <table class="form-table">
-<?php fdl_field_checkbox('break', 'Break the item if has the more tag'); ?>
+<?php fdl_field_checkbox('break', 'Break feed items if thay have a "read more" break'); ?>
 <?php fdl_field_textarea('before', 'Code before the post'); ?>
 <?php fdl_field_textarea('more', 'Code after the more break'); ?>
 <?php fdl_field_textarea('after', 'Code after the post'); ?>

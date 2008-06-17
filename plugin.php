@@ -3,7 +3,7 @@
 Plugin Name: Feed Layout
 Plugin URI: http://www.satollo.com/english/wordpress/post-layout
 Description: Modify every single feed item adding html code before and after posts.
-Version: 1.0.1
+Version: 1.0.2
 Author: Satollo
 Author URI: http://www.satollo.com
 Disclaimer: Use at your own risk. No warranty expressed or implied is provided.
@@ -34,6 +34,9 @@ function fdl_the_content(&$content)
     global $fdl_options;
 
 	if (!is_feed()) return $content;
+	
+	$link = get_permalink();
+	$title = htmlspecialchars(get_the_title());
 	
     $before = $fdl_options['before'];
     $after = $fdl_options['after'];
@@ -84,6 +87,11 @@ function fdl_the_content(&$content)
             $content = substr($content, 0, $x+1) . $more . substr($content, $x+1);
         }
     }
+
+	$before = str_replace('[title]', $title, $before);
+    $before = str_replace('[link]', $link, $before);
+	$after = str_replace('[title]', $title, $after);
+    $after = str_replace('[link]', $link, $after);
 
     return $before . $content . $after;
 }
