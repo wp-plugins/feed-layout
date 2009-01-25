@@ -65,6 +65,18 @@ else
 
 <h2>Feed Layout</h2>
 
+<p>To have more information about Feed Layout read the <a href="http://www.satollo.com/english/wordpress/feed-layout">official plugin page</a>
+or write me to info@satollo.com.</p>
+
+<p>Consider a <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2545483">DONATION</a> to support this plugin.</p>
+
+<p>
+My plugins: 
+<a href="http://www.satollo.com/english/wordpress/post-layout">Post Layout</a>, 
+<a href="http://www.satollo.com/english/wordpress/feed-layout">Feed Layout</a>,
+<a href="http://www.satollo.com/english/wordpress/hyper-cache">Hyper Cache</a>.
+</p>
+
 <table class="form-table">
 <?php fdl_field_checkbox('break', 'Break feed items if thay have a "read more" break'); ?>
 <?php fdl_field_textarea('before', 'Code before the post'); ?>

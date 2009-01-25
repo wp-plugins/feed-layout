@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: Feed Layout
-Plugin URI: http://www.satollo.com/english/wordpress/post-layout
-Description: Modify every single feed item adding html code before and after posts.
-Version: 1.0.2
+Plugin URI: http://www.satollo.com/english/wordpress/feed-layout
+Description: Feed Layout enables controls to modify the feed contents adding headers, footers, copyright notices.
+Version: 1.0.3
 Author: Satollo
 Author URI: http://www.satollo.com
 Disclaimer: Use at your own risk. No warranty expressed or implied is provided.
@@ -27,6 +27,14 @@ Disclaimer: Use at your own risk. No warranty expressed or implied is provided.
 */
 
 $fdl_options = get_option('fdl');
+
+add_filter("plugin_action_links_feed-layout/plugin.php", 'fdl_plugin_action_links');
+function fdl_plugin_action_links($links) 
+{ 
+	$settings_link = '<a href="options-general.php?page=feed-layout/options.php">' . __('Settings') . '</a>'; 
+	array_unshift($links, $settings_link); 
+ 	return $links;
+}
 
 add_action('the_content', 'fdl_the_content', 70);
 function fdl_the_content(&$content)

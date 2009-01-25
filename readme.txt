@@ -1,29 +1,29 @@
 === Feed Layout ===
-Tags: feed, layout, theme, adsense, page, ads
+Tags: feed, layout, theme, adsense, page, ads, copyright, atom, rss
 Requires at least: 2.1
 Tested up to: 2.5.1
-Stable tag: 1.0.2
-Donate link: http://www.satollo.com/english/donate
+Stable tag: 1.0.3
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2545483
 Contributors: satollo
 
-Modify every single feed item adding html code before and after posts.
+Feed Layout enables controls to modify the feed contents adding headers, footers, copyright notices.
 
 == Description ==
 
-Modify every single feed item adding html code before and after posts. It works like
-Post Layout plugin, and can execute php code inserted in the footer o header text.
+Feed Layout enables controls to modify the feed contents adding headers, footers, copyright notices.
 
-Want to add a copyright notice? You can do it.
+You can add a copyright notice to every post, a link in the bottom like a "continue reading",
+link to specila contents your reader can access only subscribing the feed, ads form ads servers
+like Tradedoubler, Zanox and so on.
 
-Want to add a row of social bookmark buttons? You can do it.
+Read more at [Feed Layout official page](http://www.satollo.com/english/wordpress/feed-layout) and write me
+if you have issues to info@satollo.com.
 
-Want to add a signature or an image with your sign? You can do it.
+**Check out my other plugins**:
 
-Want to add some links you think to be useful in a feed? You can do it.
-
-Want to change the world to a better one? You can do it (but not with this plugin...)
-
-You can see it live from my [feed](http://www.satollo.com/english/feed)
+* [Hyper Cache](http://www.satollo.com/english/wordpress/hyper-cache "Hyper Cache WordPress plugin: when performance and flexibilty are not an option")
+* [Post Layout](http://www.satollo.com/english/wordpress/post-layout "Post Layout WordPress plugin: the easy way to enrich your posts")
+* [Feed Layout](http://www.satollo.com/english/wordpress/feed-layout "Feed Layout WordPress plugin: the easy way to enrich your feed contents")
 
 == Installation ==
 
@@ -31,19 +31,12 @@ You can see it live from my [feed](http://www.satollo.com/english/feed)
 2. Go into the WordPress admin interface and activate the plugin
 3. Go to the options page and configure the plugin
 
-== History ==
-Version 1.0.2
- - added to special "tag" to put in the texts: link and title (between quare brackets)
- 
-Version 1.0.1
-	- fixed a bug (serious) in the option page
-	
-Versioon 1.0
-	- first release
-
 == Frequently Asked Questions ==
 
-No questions have been asked.
+**How can I submit a bug?**
+
+Write me to info@satollo.com, please, it's the quicker way to have it fixed. You can write to the 
+WordPress forum, too, but I read it rarely.
 
 == Screenshots ==
 
