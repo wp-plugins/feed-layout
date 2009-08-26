@@ -50,18 +50,16 @@ function fdl_field_textarea($name, $label='', $tips='', $attrs='')
   echo '</td></tr>';
 }
 
+$options = get_option('fdl');
+
 if (isset($_POST['save']))
 {
-  $options = fdl_request('options');
-  update_option('fdl', $options);
-}
-else
-{
-    $options = get_option('fdl');
+    if (!check_admin_referer()) die('No hacking please');
+    $options = stripslashes_deep($_POST['options']);
+    update_option('fdl', $options);
 }
 ?>
 <div class="wrap">
-<form method="post">
 
 <h2>Feed Layout</h2>
 
@@ -77,6 +75,8 @@ My plugins:
 <a href="http://www.satollo.com/english/wordpress/hyper-cache">Hyper Cache</a>.
 </p>
 
+<form method="post" action="">
+<?php wp_nonce_field(); ?>
 <table class="form-table">
 <?php fdl_field_checkbox('break', 'Break feed items if thay have a "read more" break'); ?>
 <?php fdl_field_textarea('before', 'Code before the post'); ?>

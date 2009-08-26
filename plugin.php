@@ -3,7 +3,7 @@
 Plugin Name: Feed Layout
 Plugin URI: http://www.satollo.com/english/wordpress/feed-layout
 Description: Feed Layout enables controls to modify the feed contents adding headers, footers, copyright notices.
-Version: 1.0.3
+Version: 1.1.0
 Author: Satollo
 Author URI: http://www.satollo.com
 Disclaimer: Use at your own risk. No warranty expressed or implied is provided.
@@ -26,8 +26,6 @@ Disclaimer: Use at your own risk. No warranty expressed or implied is provided.
     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-$fdl_options = get_option('fdl');
-
 add_filter("plugin_action_links_feed-layout/plugin.php", 'fdl_plugin_action_links');
 function fdl_plugin_action_links($links) 
 { 
@@ -39,19 +37,18 @@ function fdl_plugin_action_links($links)
 add_action('the_content', 'fdl_the_content', 70);
 function fdl_the_content(&$content)
 {
-    global $fdl_options;
-
 	if (!is_feed()) return $content;
-	
+
+    $options = get_option('fdl');
+
 	$link = get_permalink();
 	$title = htmlspecialchars(get_the_title());
 	
-    $before = $fdl_options['before'];
-    $after = $fdl_options['after'];
-    $more = $fdl_options['more'];
+    $before = $options['before'];
+    $after = $options['after'];
+    $more = $options['more'];
 	
-	
-	if ($fdl_options['break']) 
+	if ($options['break']) 
 	{
 		$x = strpos($content, '<span id="more');	
 		if ($x !== false)
@@ -104,8 +101,8 @@ function fdl_the_content(&$content)
     return $before . $content . $after;
 }
 
-add_action('admin_head', 'fdl_admin_head');
-function fdl_admin_head()
+add_action('admin_menu', 'fdl_admin_menu');
+function fdl_admin_menu()
 {
     add_options_page('Feed Layout', 'Feed Layout', 'manage_options', 'feed-layout/options.php');
 }
